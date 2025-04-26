@@ -1,0 +1,196 @@
+/* Main Styles for Kitapsever Website */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Navbar Styles */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card {
+    cursor: pointer;
+    height: 100%;
+}
+
+.category-card:hover {
+    background-color: #f0f0f0;
+}
+
+/* Book Card Styles */
+.book-card {
+    height: 100%;
+}
+
+.book-card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Reading List Styles */
+#reading-list-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+#reading-list-section .nav-tabs {
+    border-bottom: 2px solid #007bff;
+    margin-bottom: 20px;
+}
+
+#reading-list-section .nav-tabs .nav-link {
+    border: none;
+    color: #495057;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 0;
+}
+
+#reading-list-section .nav-tabs .nav-link.active {
+    color: #007bff;
+    background-color: transparent;
+    border-bottom: 3px solid #007bff;
+}
+
+#reading-list-section .tab-content {
+    padding-top: 10px;
+}
+
+#reading-list-section .book-card {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#reading-list-section .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#reading-list-section .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+#reading-list-section h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Star Rating Styles */
+.star-rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+/* Review Card Styles */
+.review-card {
+    margin-bottom: 15px;
+}
+
+.review-card .reviewer {
+    font-weight: bold;
+}
+
+.review-card .date {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Chat Styles */
+.chat-container {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.chat-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    margin-left: 20%;
+    border-radius: 15px 15px 0 15px;
+}
+
+.system-message {
+    background-color: #e9ecef;
+    color: #212529;
+    margin-right: 20%;
+    border-radius: 15px 15px 15px 0;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.message-time {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.system-message .message-time {
+    color: #6c757d;
+}
+
+.message-body {
+    word-break: break-word;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 50px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .book-card img {
+        height: 150px;
+    }
+    
+    .chat-container {
+        height: 300px;
+    }
+    
+    .user-message, .system-message {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
