@@ -1,0 +1,175 @@
+/* Dark Mode Styles for Kitapsever Website */
+
+/* CSS Variables for Theme Colors */
+:root {
+    /* Light Theme (Default) */
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --card-bg: #fff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-hover-bg: #f0f0f0;
+    --border-color: #dee2e6;
+    --secondary-text: #6c757d;
+    --primary-color: #007bff;
+    --chat-bg: #f8f9fa;
+    --system-message-bg: #e9ecef;
+    --system-message-color: #212529;
+    --input-bg: #fff;
+    --input-border: #ced4da;
+    --footer-bg: #343a40;
+    --footer-text: #fff;
+    --dropdown-bg: #fff;
+    --dropdown-hover: #f8f9fa;
+    --dropdown-text: #212529;
+}
+
+/* Dark Theme */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --card-hover-bg: #2a2a2a;
+    --border-color: #444;
+    --secondary-text: #adb5bd;
+    --primary-color: #0d6efd;
+    --chat-bg: #1e1e1e;
+    --system-message-bg: #2a2a2a;
+    --system-message-color: #e0e0e0;
+    --input-bg: #2a2a2a;
+    --input-border: #444;
+    --footer-bg: #1a1a1a;
+    --footer-text: #e0e0e0;
+    --dropdown-bg: #2a2a2a;
+    --dropdown-hover: #3a3a3a;
+    --dropdown-text: #e0e0e0;
+}
+
+/* Apply Theme Colors */
+.dark-mode body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.dark-mode .card {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 6px var(--card-shadow);
+    border-color: var(--border-color);
+}
+
+.dark-mode .card-body {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.dark-mode .category-card:hover {
+    background-color: var(--card-hover-bg);
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--text-color);
+}
+
+.dark-mode .form-control::placeholder {
+    color: var(--secondary-text);
+}
+
+.dark-mode .form-label {
+    color: var(--text-color);
+}
+
+.dark-mode .chat-container {
+    background-color: var(--chat-bg);
+    border-color: var(--border-color);
+}
+
+.dark-mode .system-message {
+    background-color: var(--system-message-bg);
+    color: var(--system-message-color);
+}
+
+.dark-mode .system-message .message-time {
+    color: var(--secondary-text);
+}
+
+.dark-mode .dropdown-menu {
+    background-color: var(--dropdown-bg);
+    border-color: var(--border-color);
+}
+
+.dark-mode .dropdown-item {
+    color: var(--dropdown-text);
+}
+
+.dark-mode .dropdown-item:hover {
+    background-color: var(--dropdown-hover);
+}
+
+.dark-mode footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+.dark-mode .text-muted {
+    color: var(--secondary-text) !important;
+}
+
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4, 
+.dark-mode h5 {
+    color: var(--text-color);
+}
+
+.dark-mode #reading-list-section {
+    background-color: var(--card-bg);
+    box-shadow: 0 0 10px var(--card-shadow);
+}
+
+.dark-mode #reading-list-section .nav-tabs {
+    border-bottom-color: var(--primary-color);
+}
+
+.dark-mode #reading-list-section .nav-tabs .nav-link {
+    color: var(--text-color);
+}
+
+.dark-mode #reading-list-section .nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.dark-mode #reading-list-section h2 {
+    border-bottom-color: var(--border-color);
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle i {
+    font-size: 1.5rem;
+}
