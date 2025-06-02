@@ -361,6 +361,15 @@ function displayBookDetails(book) {
         </div>
     `;
     
+    // Dispatch event for book chat integration
+    const event = new CustomEvent('bookDetailsLoaded', {
+        detail: {
+            bookId: book.id,
+            bookTitle: bookData.title
+        }
+    });
+    document.dispatchEvent(event);
+    
     // Display book info
     bookInfoContainer.innerHTML = `
         <div class="book-info">
@@ -592,7 +601,9 @@ function loadFeaturedBooks() {
     
     // Call the API
     window.bookApi.getFeaturedBooks()
-        .then(books => {
+        .then(data => {
+            // Extract items array from response
+            const books = data.items || [];
             // Display featured books
             displayFeaturedBooks(books);
         })
